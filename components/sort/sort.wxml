@@ -1,0 +1,7 @@
+<view class="sort">{{title}}</view>
+<view class="body">
+  <view wx:for="{{list}}" wx:key='index' class="bodyWord" bindtap="jump" data-name="{{item.name}}" data-gender="{{item.gender}}">
+    <view>{{item.name}}</view>
+    <view class="two">{{item.bookCount}}本</view>
+  </view>
+</view>

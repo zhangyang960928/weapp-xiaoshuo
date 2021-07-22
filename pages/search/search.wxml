@@ -1,0 +1,53 @@
+<view class="top">
+  <view class="first displayF justify-contentB align-itemsC">
+    <view class="photo1 displayF justify-contentE align-itemsC">
+      <image src="../../assets/c137b4060148436d0d56126295e6227.png" wx:if="{{show}}"></image>
+      <input type="text" placeholder="输入书名或者作者名" bindconfirm="bindconfirm" bindinput="bindinput" value="{{value}}"
+        confirm-type="search" />
+    </view>
+    <image src="../../assets/31eb8229086ec36cfb12b4512fcfa59.png" wx:if="{{!show}}" bindtap="change2">
+    </image>
+  </view>
+</view>
+<!-- 提示 -->
+<view class="second" wx:if="{{flag}}">
+  <view class="secondWord displayF justify-contentB">
+    <view>大家都在搜</view>
+    <view class="right displayF" bindtap="change">
+      <image src="../../assets/新建事件.png"></image>
+      换一换
+    </view>
+  </view>
+  <view class="secondWord1 displayF">
+    <view class="word" wx:for="{{list}}" wx:key="index">
+      <view style="background-color:{{arr[index]}}" class="wordColor" bindtap="change1" data-item="{{item}}">{{item}}
+      </view>
+    </view>
+  </view>
+  <view class="secondWord displayF justify-contentB">
+    <view>搜索历史</view>
+    <view class="right displayF" bindtap="remove">
+      <image src="../../assets/垃圾箱.png"></image>
+      清空
+    </view>
+  </view>
+  <view wx:for="{{searchList1}}" wx:key="index" class="searchWord">
+    <view class="searchWord1" bindtap="change1" data-item="{{item.name}}">{{item.name}}</view>
+  </view>
+</view>
+<!-- 搜索 -->
+<view wx:else>
+  <view class="search1">
+    <view class="search" wx:for="{{searchList}}" wx:key="index" bindtap="jump" data-item="{{item}}">
+      <view class="contentWord displayF">
+        <image src="{{url+item.cover}}"></image>
+        <view class="contentWord1">
+          <view class="one">{{item.title}}</view>
+          <view class="two">{{item.author}}</view>
+          <view class="three">{{item.shortIntro}}</view>
+          <view class="four">最近收藏：{{item.latelyFollower}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

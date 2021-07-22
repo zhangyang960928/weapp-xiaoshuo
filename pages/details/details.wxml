@@ -1,0 +1,80 @@
+<view class="top">
+  <view class="topOne"></view>
+  <view class="topTwo" bindtap="add">
+    <image src="{{url+list.cover}}" wx:if="{{list.cover}}"></image>
+  </view>
+</view>
+<view class="second displayF flex-directionC align-itemsC">
+  <view class="secondOne">{{list.title}}</view>
+  <view class="secondTwo">{{list.author}}</view>
+</view>
+<view class="third">
+  <view class="thirdOne displayF">
+    <view class="boxOne displayF justify-contentC">
+      <view class="left"> 开始阅读</view>
+    </view>
+    <view class="boxTwo displayF justify-contentC" bindtap="join">
+      <view class="right">{{flag1?'加入书架':'已加入书架'}}</view>
+    </view>
+  </view>
+  <view class="thirdTwo displayF justify-contentC align-itemsC">
+    <view class="xing" wx:for="{{score}}" wx:key="index">
+      <image src="../../assets/实心星星-active.png"></image>
+    </view>
+    <view class="xing1" wx:for="{{5-score}}" wx:key="index">
+      <image src="../../assets/实心星星.png"></image>
+    </view>
+  </view>
+  <view class="thirdFour displayF justify-contentC">
+    更新至
+    <view class="thirdFourword">{{list.lastChapter}}</view>
+  </view>
+  <view class="thirdFive displayF justify-contentC">
+    <view class="thirdWord1 displayF align-itemsC">
+      <view class="thirdleft displayF justify-contentC" bindtap="changecolor" data-index="0">
+        <view class="thirdleftword {{index==0?'thirdcolor':''}}">详情</view>
+      </view>
+      <view class="thirdright displayF justify-contentC" bindtap="changecolor" data-index="1">
+        <view class="thirdrightword {{index==1?'thirdcolor':''}}">评价({{arr1.total}})</view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{index==0}}" class="thirdSix">
+    <scroll-view scroll-y="true" style="height: 600rpx;" class="sixword">
+      <view class="sixword1">简介：{{list.longIntro}}</view>
+      <view class="sixword2 displayF justify-contentC align-itemsC">
+        <image src="../../assets/全部.png"></image>
+        总目录({{list.chaptersCount}}章)
+      </view>
+      <view class="sixword3 displayF justify-contentB align-itemsC">
+        <view class="sixword3left">看过这本书的人还在看</view>
+        <view class="sixword3right displayF" bindtap="change">
+          <image src="../../assets/新建事件.png"></image>
+          换一换
+        </view>
+      </view>
+      <view class="sixword4 displayF justify-contentB">
+        <view class="sixone" wx:for="{{list1}}" wx:key="index" bindtap="jump" data-id="{{item._id}}">
+          <image src="{{url+item.cover}}"></image>
+          <view class="sixoneword displayF justify-contentC">{{item.title}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view wx:if="{{index==1}}" class="thirdSix">
+    <scroll-view scroll-y="true" style="height: 600rpx;" class="sixword" bindscrolltolower="bindscrolltolower">
+      <view class="comment displayF" wx:for="{{arr}}" wx:key="index">
+        <view class="commentWord">
+          <image src="{{url+item.author.avatar}}"></image>
+        </view>
+        <view class="commentWord1">
+          <view class="commentName">{{item.author.nickname}}</view>
+          <view class="commentContent">{{item.content}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="foot" wx:if="{{flag}}" bindtap="add1">
+    <image src="{{url+list.cover}}" bindlongpress="bindlongpress" data-url="{{url+list.cover}}"></image>
+  </view>
+</view>

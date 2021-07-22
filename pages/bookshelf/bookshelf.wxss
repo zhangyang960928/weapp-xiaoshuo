@@ -1,0 +1,96 @@
+@keyframes move {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+
+  75% {
+    -webkit-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+
+  }
+}
+
+.top {
+  height: 100rpx;
+  padding: 0rpx 30rpx;
+}
+
+.left image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 3rpx;
+}
+
+.help {
+  border: 1px solid gray;
+  color: gray;
+  padding: 10rpx 20rpx;
+  border-radius: 10px;
+  margin-right: 40rpx;
+}
+
+.refresh image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.second {
+  font-size: 13px;
+  margin: 80rpx 130rpx;
+}
+
+.third {
+  padding: 0 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.thirdOne {
+  margin: 20rpx 20rpx 0 0;
+  width: 150rpx;
+  position: relative;
+}
+
+.thirdOne image {
+  width: 150rpx;
+  height: 200rpx;
+}
+
+.thirdTwo {
+  font-size: 10px;
+  color: gray;
+}
+
+.thirdFour image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.thirdFour {
+  position: absolute;
+  top: 0;
+  left: 110rpx;
+}
+
+.photo {
+  animation: move 2s 0s infinite;
+}
+.thirdFive{
+  font-size: 12px;
+}

@@ -1,0 +1,48 @@
+.classification{
+  background: #eeeeee; 
+}
+.title{
+  flex: 1;
+}
+.word{
+  font-size: 14px;
+  padding: 20rpx 10rpx;
+}
+.changeWord{
+  border-bottom: 2px solid red;
+  color: red;
+}
+.content{
+  padding: 0 20rpx;
+}
+.contentWord{
+  border-bottom: 1px solid #eeeeee;
+  padding: 20rpx 0;
+}
+.contentWord image{
+  width: 150rpx;
+  height: 200rpx;
+}
+.contentWord1{
+  width: 540rpx;
+  margin-left: 20rpx;
+}
+.one {
+  font-size: 12px;
+}
+.two {
+  font-size: 10px;
+  color: gray;
+  margin: 10rpx 0;
+}
+.three{
+  font-size: 10px;
+  color: gray;
+  height: 88rpx;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

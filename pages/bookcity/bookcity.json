@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "sort":"../../components/sort/sort",
+    "ranking":"../../components/ranking/ranking"
+  },
+  "navigationBarBackgroundColor": "#DC143C",
+  "navigationBarTitleText": "书城",
+  "navigationBarTextStyle": "white"
+}

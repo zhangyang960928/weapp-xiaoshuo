@@ -1,0 +1,15 @@
+<view class="top displayF">
+  <view class="left displayF align-itemsC justify-contentC" wx:for="{{arr}}" wx:key="index" bindtap="setIndex"
+    data-index="{{index}}">
+    <view class="word {{active===index?'changeWord':''}}">{{item.name}}</view>
+  </view>
+</view>
+<view wx:if="{{active===0}}">
+  <sort wx:if="{{list.male.length>0}}" list="{{list.male}}" title='男生'></sort>
+  <sort wx:if="{{list.female.length>0}}" list="{{list.female}}" title='女生'></sort>
+  <sort wx:if="{{list.press.length>0}}" list="{{list.press}}" title='出版'></sort>
+</view>
+<view wx:else>
+  <ranking wx:if="{{list1.length>0}}" list1="{{list1}}" title="男生"></ranking>
+  <ranking wx:if="{{list2.length>0}}" list1="{{list2}}" title="女生"></ranking>
+</view>

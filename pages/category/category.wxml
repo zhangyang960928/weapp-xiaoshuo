@@ -1,0 +1,35 @@
+<view class="top">
+  <view class="one displayF">
+    <view class="oneWord {{active===index?'wordColor':''}}" wx:for="{{typeList}}" wx:key='index' bindtap="obtain"
+      data-index="{{index}}">
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <view class="ter">
+    <scroll-view scroll-x="true" bindscroll="scroll" class="scroll">
+      <view class="one displayF" wx:if="{{list.length>0}}">
+        <view class="oneWord {{active1===index?'wordColor':''}}" wx:for="{{list}}" wx:key='index' bindtap="obtain1"
+          data-index="{{index}}" data-item="{{item}}">
+          <view>{{item}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="foot">
+  <view class="content displayF" wx:for="{{arr}}" wx:key="index" bindtap="jump" data-id="{{item._id}}">
+    <view class="contentWord displayF">
+      <image src="{{url+item.cover}}"></image>
+      <view class="contentWord1">
+        <view class="one1">{{item.title}}</view>
+        <view class="two">{{item.author}}</view>
+        <view class="three">{{item.shortIntro}}</view>
+        <view class="box displayF">
+          <view class="four" wx:if="{{item.tags[0]}}">{{item.tags[0]}}</view>
+          <view class="four1" wx:if="{{item.tags[1]}}">{{item.tags[1]}}</view>
+          <view class="four2" wx:if="{{item.tags[2]}}">{{item.tags[2]}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

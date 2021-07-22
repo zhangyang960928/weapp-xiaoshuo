@@ -1,0 +1,9 @@
+<view class="ranking">{{title}}</view>
+<view class="body">
+  <view class="word" wx:for="{{list1}}" wx:key="index" bindtap="classification" data-item="{{item}}">
+    <view class="photo">
+      <image src="{{url+item.cover}}"></image>
+    </view>
+    <view class="tilte">{{item.title}}</view>
+  </view>
+</view>

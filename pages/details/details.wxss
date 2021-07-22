@@ -1,0 +1,214 @@
+.top {
+  position: relative;
+}
+
+.topOne {
+  height: 100rpx;
+  background: #DC143C;
+}
+
+.topTwo {
+  height: 200rpx;
+}
+
+.topTwo image {
+  position: absolute;
+  width: 200rpx;
+  height: 300rpx;
+  top: 0;
+  left: 275rpx;
+  box-shadow: 0 0 10rpx #f4f4f4;
+}
+
+.second {
+  height: 160rpx;
+}
+
+.secondOne {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.secondTwo {
+  font-size: 12px;
+  color: gray;
+  margin-top: 20rpx;
+}
+
+.third {
+  background: #f7f7f7;
+}
+
+.boxOne {
+  flex: 1;
+}
+
+.third {
+  position: relative;
+  border-top: 1px solid #f1f1f1;
+  background: #eeeeee;
+  padding: 0 0 20rpx 0;
+}
+
+.thirdOne {
+  width: 750rpx;
+  position: absolute;
+  top: -28.8rpx;
+  left: 0;
+}
+
+.boxTwo {
+  flex: 1;
+}
+
+.left {
+  background: red;
+  color: white;
+  font-size: 13px;
+  padding: 10rpx 40rpx;
+  border-radius: 26rpx;
+}
+
+.right {
+  background: white;
+  color: gray;
+  font-size: 13px;
+  padding: 10rpx 40rpx;
+  border-radius: 26rpx;
+  border: 1px solid #f1f1f1;
+}
+.thirdTwo {
+  padding: 60rpx 0 0 0;
+}
+.xing image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.xing1 image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.thirdFour{
+  font-size: 12px;
+  padding: 10rpx 0 30rpx 0 ;
+}
+.thirdFourword{
+  color: #77c7b5;
+  margin-left: 5rpx;
+}
+.thirdWord1{
+  width: 710rpx;
+  background: white;
+  height: 60rpx;
+  border-bottom: 1px solid #f7f7f7;
+}
+.thirdleft{
+  flex: 1;
+  font-size: 13px;
+}
+.thirdleftword{
+  padding: 12rpx 20rpx;
+}
+.thirdright{
+  flex: 1;
+  font-size: 13px;
+}
+.thirdrightword{
+  padding: 12rpx 20rpx;
+}
+.thirdcolor {
+  color: red;
+  border-bottom: 2px solid red;
+}
+.thirdSix{
+  width: 710rpx;
+  background: white;
+  margin-left: 20rpx;
+}
+.sixword{
+  padding: 20rpx;
+}
+.sixword1{
+  width: 670rpx;
+  font-size: 12px;
+  line-height:44rpx;
+}
+.sixword2{
+  width: 670rpx;
+  background: #eeeeee;
+  font-size: 12px;
+  color: gray;
+  padding: 10rpx 0;
+  margin: 20rpx 0 30rpx 0;
+}
+.sixword2 image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+.sixword3{
+  width: 670rpx;
+  font-size: 13px;
+}
+.sixword3right{
+  color: #dd7473;
+}
+.sixword3right image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.sixword4{
+  width: 670rpx;
+  margin-top: 40rpx;
+}
+.sixone{
+  width: 200rpx;
+}
+.sixone image{
+  width: 200rpx;
+  height: 300rpx;
+}
+.sixoneword{
+  width: 200rpx;
+  font-size: 12px;
+  text-align: center;
+}
+.comment{
+  margin-bottom: 10rpx;
+}
+.commentWord image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.commentWord1{
+  margin-left: 20rpx;
+}
+.commentName{
+  color: #ff6347;
+  font-size: 10px;
+}
+.commentContent{
+  font-size: 10px;
+  color: gray;
+  width: 570rpx;
+  margin-top: 20rpx;
+  line-height: 40rpx;
+}
+.foot{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.4);
+}
+.foot image{
+  width: 400rpx;
+  height: 800rpx;
+  margin: 200rpx 200rpx;
+}

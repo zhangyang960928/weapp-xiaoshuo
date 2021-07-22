@@ -1,0 +1,41 @@
+<view wx:if="{{totalRank}}" class="classification displayF">
+  <view class="title displayF align-itemsC justify-contentC" bindtap="setIndex" data-index="0" data-id="{{_id}}">
+    <view class="word {{active==0?'changeWord':''}}">周榜</view>
+  </view>
+  <view class="title displayF align-itemsC justify-contentC" bindtap="setIndex" data-index="1" data-id="{{monthRank}}">
+    <view class="word {{active==1?'changeWord':''}}">月榜</view>
+  </view>
+  <view class="title displayF align-itemsC justify-contentC" bindtap="setIndex" data-index="2" data-id="{{totalRank}}">
+    <view class="word {{active==2?'changeWord':''}}">总榜</view>
+  </view>
+</view>
+<view wx:if="{{active==0}}" class="content" wx:for="{{list}}" wx:key="index" bindtap="jump" data-id="{{item._id}}">
+  <view class="contentWord displayF">
+    <image src="{{url+item.cover}}"></image>
+    <view class="contentWord1">
+      <view class="one">{{item.title}}</view>
+      <view class="two">{{item.author}}</view>
+      <view class="three">{{item.shortIntro}}</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{active==1}}" class="content" wx:for="{{list}}" wx:key="index">
+  <view class="contentWord displayF">
+    <image src="{{url+item.cover}}"></image>
+    <view class="contentWord1">
+      <view class="one">{{item.title}}</view>
+      <view class="two">{{item.author}}</view>
+      <view class="three">{{item.shortIntro}}</view>
+    </view>
+  </view>
+</view>
+<view wx:if="{{active==2}}" class="content" wx:for="{{list}}" wx:key="index">
+  <view class="contentWord displayF">
+    <image src="{{url+item.cover}}"></image>
+    <view class="contentWord1">
+      <view class="one">{{item.title}}</view>
+      <view class="two">{{item.author}}</view>
+      <view class="three">{{item.shortIntro}}</view>
+    </view>
+  </view>
+</view>

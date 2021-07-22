@@ -1,0 +1,31 @@
+<view class="top displayF align-itemsE justify-contentB">
+<!-- 左边 -->
+  <view class="left">
+    <image src="../../assets/编写.png" wx:if="{{flag}}" bindtap="change"></image>
+    <image src="../../assets/对勾 .png" wx:if="{{!flag}}" bindtap="change1"></image>
+  </view>
+  <!-- 右边 -->
+  <view class="right displayF align-itemsC">
+    <view class="help" bindtap="help">
+      帮助
+    </view>
+    <view class="refresh">
+      <image src="../../assets/新建事件单—刷新.png"></image>
+    </view>
+  </view>
+</view>
+<view wx:if="{{list===null}}">
+  <view class="second">主人还没收藏书籍哦，请去书城收藏吧！</view>
+</view>
+<view wx:else>
+  <view class="third">
+    <view class="thirdOne" wx:for="{{list}}" wx:key='index' bindtap="jump1" data-item="{{item}}">
+      <image src="{{url+item.cover}}" class="photo1 {{flag===false?'photo':''}}"></image>
+      <view class="thirdFive">{{item.title}}</view>
+      <view class="thirdTwo">更新至：{{item.lastChapter}}</view>
+      <view class="thirdFour" wx:if="{{!flag}}" catchtap="remove" data-item="{{item}}">
+        <image src="../../assets/31eb8229086ec36cfb12b4512fcfa59.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
